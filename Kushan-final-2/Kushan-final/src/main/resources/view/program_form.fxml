@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="550.0" prefWidth="894.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.ProgramFormController">
+   <children>
+      <Rectangle height="550.0" stroke="BLACK" strokeType="INSIDE" width="894.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.1875" green="0.75" blue="0.6565355658531189" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Text layoutX="322.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage Programs" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtProgramName" layoutX="274.0" layoutY="199.0" onKeyReleased="#nameKeyRelaseAction" prefHeight="33.0" prefWidth="235.0" promptText="Program name" />
+      <JFXButton fx:id="btnProgramSave" buttonType="RAISED" contentDisplay="RIGHT" layoutX="431.0" layoutY="302.0" onAction="#btnSaveOnAction" prefHeight="10.0" prefWidth="50.0" style="-fx-background-color: #24a0ed;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnProgramUpdate" buttonType="RAISED" contentDisplay="RIGHT" layoutX="492.0" layoutY="302.0" onAction="#btnUpdateOnAction" prefHeight="10.0" prefWidth="50.0" style="-fx-background-color: #4cd137;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnProgramDelete" buttonType="RAISED" contentDisplay="RIGHT" layoutX="553.0" layoutY="302.0" onAction="#btnDeleteOnAction" prefHeight="10.0" prefWidth="50.0" style="-fx-background-color: #e74c3c;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" contentDisplay="RIGHT" layoutX="614.0" layoutY="302.0" onAction="#btnClearOnAction" prefHeight="10.0" prefWidth="50.0" style="-fx-background-color: #6c757d;" text="Clear" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TextField fx:id="txtProgramFee" layoutX="274.0" layoutY="250.0" onKeyReleased="#feeKeyRelaseAction" prefHeight="33.0" prefWidth="235.0" promptText="Fee" />
+      <TextField fx:id="txtProgramDuration" layoutX="412.0" layoutY="143.0" onKeyReleased="#durationKeyRelaseAction" prefHeight="33.0" prefWidth="236.0" promptText="Duration" />
+      <Label layoutX="247.0" layoutY="146.0" text="ID:" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblProgramId" layoutX="290.0" layoutY="142.0" prefHeight="34.0" prefWidth="111.0">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblProgram" layoutX="108.0" layoutY="355.0" prefHeight="157.0" prefWidth="695.0">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="63.0" text="ID" />
+            <TableColumn fx:id="colName" prefWidth="228.5" text="Program name" />
+            <TableColumn fx:id="colDuration" prefWidth="171.51226806640625" text="Duration" />
+            <TableColumn fx:id="colFee" prefWidth="229.60003662109375" text="Fee (LKR)" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

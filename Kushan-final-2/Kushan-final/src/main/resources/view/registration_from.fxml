@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="550.0" prefWidth="894.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.RegistrationFormController">
+   <children>
+      <Rectangle height="550.0" stroke="BLACK" strokeType="INSIDE" width="894.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.1875" green="0.75" blue="0.6565355658531189" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Text layoutX="321.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Course Registration" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Text>
+      <Label layoutX="149.0" layoutY="105.0" text="Registration ID:" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblRegistrationId" layoutX="253.0" layoutY="106.0" prefHeight="17.0" prefWidth="85.0">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="505.0" layoutY="105.0" text="Student ID:" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbProgramName" layoutX="255.0" layoutY="163.0" onAction="#cmbProgramNameOnAction" prefHeight="26.0" prefWidth="192.0" unFocusColor="WHITE" />
+      <Label layoutX="151.0" layoutY="169.0" text="Program Name" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="149.0" layoutY="231.0" text="Program ID:" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblProgramId" layoutX="233.0" layoutY="232.0" prefHeight="17.0" prefWidth="85.0">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="743.0" layoutY="14.0" text="Date:" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="792.0" layoutY="15.0" prefHeight="17.0" prefWidth="85.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="503.0" layoutY="157.0" text="Student name:" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblStudentName" layoutX="603.0" layoutY="158.0" prefHeight="17.0" prefWidth="85.0">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="473.0" layoutY="278.0" text="Fee:" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblFee" layoutX="518.0" layoutY="279.0" prefHeight="17.0" prefWidth="85.0">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="147.0" layoutY="285.0" prefHeight="20.0" prefWidth="116.0" text="Program duration:" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblProgramDuration" layoutX="273.0" layoutY="287.0" prefHeight="17.0" prefWidth="85.0">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="473.0" layoutY="231.0" text="Payment:" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtFirstPayment" layoutX="533.0" layoutY="229.0" onKeyReleased="#paymentOnKeyReleaseOnAction" prefHeight="16.0" prefWidth="131.0" promptText="Payment" />
+      <TextField fx:id="txtStudentId" layoutX="587.0" layoutY="102.0" onKeyReleased="#idKeyReleaseAction" prefHeight="26.0" prefWidth="162.0" promptText="ID" />
+      <JFXButton buttonType="RAISED" contentDisplay="RIGHT" layoutX="694.0" layoutY="104.0" onAction="#btnSearchOnAction" prefHeight="21.0" prefWidth="52.0" style="-fx-background-color: gray;" text="Search" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="9.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" contentDisplay="RIGHT" layoutX="752.0" layoutY="213.0" onAction="#btnSaveOnAction" prefHeight="36.0" prefWidth="100.0" style="-fx-background-color: #009432; -fx-background-radius: 6;" text="Register" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" contentDisplay="RIGHT" layoutX="24.0" layoutY="19.0" onAction="#btnViewRegistrationDetailsOnAction" prefHeight="30.0" prefWidth="73.0" style="-fx-background-color: #8e44ad; -fx-background-radius: 6;" text="View details" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" contentDisplay="RIGHT" layoutX="752.0" layoutY="268.0" onAction="#btnClearOnAction" prefHeight="36.0" prefWidth="100.0" style="-fx-background-color: gray; -fx-background-radius: 6;" text="Clear" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="tblRegistration" layoutX="99.0" layoutY="358.0" prefHeight="157.0" prefWidth="695.0">
+         <columns>
+            <TableColumn fx:id="colRegId" prefWidth="42.849830627441406" text="Reg ID" />
+            <TableColumn fx:id="colStudentId" prefWidth="64.39986419677734" text="Student ID" />
+            <TableColumn fx:id="colStudentName" prefWidth="115.65023803710938" text="Student Name" />
+            <TableColumn fx:id="colProgramId" prefWidth="54.900146484375" text="Pro ID" />
+            <TableColumn fx:id="colProgramName" prefWidth="172.35028076171875" text="Program Name" />
+            <TableColumn fx:id="colPaidAmount" prefWidth="119.99993896484375" text="Paid amount" />
+            <TableColumn fx:id="colFee" prefWidth="120.79998779296875" text="Fee" />
+         </columns>
+      </TableView>
+      <JFXComboBox fx:id="cmbPaymentMethod" focusColor="WHITE" layoutX="615.0" layoutY="193.0" prefHeight="26.0" prefWidth="116.0" unFocusColor="WHITE" />
+      <Label layoutX="501.0" layoutY="199.0" text="Payment method:" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

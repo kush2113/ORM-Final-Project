@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.MotionBlur?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootNode" prefHeight="622" prefWidth="892" style="-fx-background-color: #3498db;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.LoginFormController">
+   <children>
+      <Rectangle arcHeight="20.0" height="622.0" stroke="#000000ab" strokeType="INSIDE" width="892.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startY="0.0643939682931611">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Text fill="WHITE" layoutX="406.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
+         <font>
+            <Font name="System Bold" size="54.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtUserName" layoutX="343.0" layoutY="259.0" onAction="#txtUsernameOnAction" onKeyReleased="#txtUserNameOnKeyReleased" prefHeight="35.0" prefWidth="249.0" promptText="user name" style="-fx-background-radius: 17;" />
+      <PasswordField fx:id="txtPassword" layoutX="343.0" layoutY="320.0" onAction="#txtPasswordOnAction" prefHeight="35.0" prefWidth="249.0" promptText="password" style="-fx-background-radius: 17;" />
+      <Label layoutX="346.0" layoutY="240.0" text="user name:" textFill="WHITE" />
+      <Label layoutX="348.0" layoutY="301.0" text="password" textFill="WHITE" />
+      <Line endX="106.4000244140625" layoutX="467.0" layoutY="168.0" startX="-100.0" stroke="WHITE">
+         <effect>
+            <MotionBlur />
+         </effect>
+      </Line>
+      <JFXButton layoutX="389.0" layoutY="411.0" onAction="#btnLoginOnAction" prefHeight="35.0" prefWidth="162.0" style="-fx-background-color: white; -fx-background-radius: 20;" text="Login">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
